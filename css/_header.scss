@@ -1,0 +1,9 @@
+.header {
+  &__tittle {
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+    @include fluid-text(60, 40)
+  }
+}

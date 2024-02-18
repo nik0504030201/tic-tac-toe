@@ -22,7 +22,7 @@ a {
   color: inherit;
 }
 h1, .h1 {
-  @include fluid-text(60, 43);
+  @include fluid-text(120, 80);
 }
 
 h2, .h2 {
