@@ -1,0 +1,20 @@
+.container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  height: auto;
+  gap: 20px;
+  &__area {
+    background-color: var(--main-area-color);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__area:after {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}

@@ -153,6 +153,7 @@ svg * {
 :root {
   --background-color: black;
   --main-color: white;
+  --main-area-color: rgb(152, 152, 152);
   --hover-color: rgb(114, 114, 114);
   --transition-value: 500ms;
 }
@@ -221,6 +222,27 @@ h4, .h4 {
 .header__description {
   text-align: center;
   font-size: clamp(40px, 4.1666666667vw, 60px);
+}
+
+.container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  height: auto;
+  gap: 20px;
+}
+.container__area {
+  background-color: var(--main-area-color);
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__area:after {
+  content: "";
+  padding-top: 100%;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
