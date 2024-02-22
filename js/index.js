@@ -2,61 +2,167 @@ let containerNode = document.querySelector(`.container`)
 for (let i = 1; i <= 9; i++) {
     containerNode.innerHTML += `<div class="container__area" id="container_${i}"></div>`
 }
+let containersList = []
+for (let i = 1; i <= 9; i++){
+    containersList.push(document.querySelector(`#container_${i}`))
+}
 let queue = 0
-containerNode.addEventListener("click", function(evt) {
-    if (evt.target.classList.contains(`container__area`))
-    if (queue == 0) {
-        evt.target.innerHTML = `КРЕСТИК`
-        evt.target.value = `a`
-        queue = 1
-    } else if (queue == 1) {
-        evt.target.innerHTML = `НОЛИК`
-        evt.target.value = `b`
+containerNode.addEventListener("click", function (evt){
+
+
+   if (evt.target.classList.contains(`container__area`) && evt.target.value === undefined){
+        switch (queue) {
+            case 0:
+                evt.target.style.backgroundColor = `green`
+                evt.target.value = `a`
+                queue = 1
+                break
+            case 1:
+                evt.target.style.backgroundColor = `red`
+                evt.target.value = `b`
+                queue = 0
+                break
+            default:
+                alert(error)
+        }
+    }
+    if (containersList[0].value === `a`
+        &&
+        containersList[1].value === `a`
+        &&
+        containersList[2].value === `a`
+
+        ||
+
+        containersList[3].value === `a`
+        &&
+        containersList[4].value === `a`
+        &&
+        containersList[5].value === `a`
+
+        ||
+
+        containersList[6].value === `a`
+        &&
+        containersList[7].value === `a`
+        &&
+        containersList[8].value === `a`
+
+        ||
+
+        containersList[0].value === `a`
+        &&
+        containersList[3].value === `a`
+        &&
+        containersList[6].value === `a`
+
+        ||
+
+        containersList[1].value === `a`
+        &&
+        containersList[4].value === `a`
+        &&
+        containersList[7].value === `a`
+
+        ||
+
+        containersList[2].value === `a`
+        &&
+        containersList[5].value === `a`
+        &&
+        containersList[8].value === `a`
+
+        ||
+
+        containersList[0].value === `a`
+        &&
+        containersList[4].value === `a`
+        &&
+        containersList[8].value === `a`
+
+        ||
+
+        containersList[2].value === `a`
+        &&
+        containersList[4].value === `a`
+        &&
+        containersList[6].value === `a`
+    ) {
+        for (let i = 0; i < 9; i++) {
+            containersList[i].value = undefined;
+            containersList[i].style.backgroundColor = `var(--main-area-color)`
+        }
         queue = 0
     }
-    if (
-        document.querySelector(`#container_1`).value + document.querySelector(`#container_2`).value + document.querySelector(`#container_3`).value == `aaa`
+
+
+
+    if (containersList[0].value === `b`
+        &&
+        containersList[1].value === `b`
+        &&
+        containersList[2].value === `b`
+
         ||
-        document.querySelector(`#container_4`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_6`).value == `aaa`
+
+        containersList[3].value === `b`
+        &&
+        containersList[4].value === `b`
+        &&
+        containersList[5].value === `b`
+
         ||
-        document.querySelector(`#container_7`).value + document.querySelector(`#container_8`).value + document.querySelector(`#container_9`).value == `aaa`
+
+        containersList[6].value === `b`
+        &&
+        containersList[7].value === `b`
+        &&
+        containersList[8].value === `b`
+
         ||
-        document.querySelector(`#container_1`).value + document.querySelector(`#container_4`).value + document.querySelector(`#container_7`).value == `aaa`
+
+        containersList[0].value === `b`
+        &&
+        containersList[3].value === `b`
+        &&
+        containersList[6].value === `b`
+
         ||
-        document.querySelector(`#container_2`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_8`).value == `aaa`
+
+        containersList[1].value === `b`
+        &&
+        containersList[4].value === `b`
+        &&
+        containersList[7].value === `b`
+
         ||
-        document.querySelector(`#container_3`).value + document.querySelector(`#container_6`).value + document.querySelector(`#container_9`).value == `aaa`
+
+        containersList[2].value === `b`
+        &&
+        containersList[5].value === `b`
+        &&
+        containersList[8].value === `b`
+
         ||
-        document.querySelector(`#container_1`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_9`).value == `aaa`
+
+        containersList[0].value === `b`
+        &&
+        containersList[4].value === `b`
+        &&
+        containersList[8].value === `b`
+
         ||
-        document.querySelector(`#container_3`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_7`).value == `aaa`
+
+        containersList[2].value === `b`
+        &&
+        containersList[4].value === `b`
+        &&
+        containersList[6].value === `b`
     ) {
-        document.querySelector(`.result`).innerHTML = `ПОБЕДИЛИ КРЕСТЫ`
-        for (let i = 0; i <= 9; i++) {
-            document.querySelector(`#container_${i+1}`).value = ``
-            document.querySelector(`#container_${i+1}`).innerHTML = ``
+        for (let i = 0; i < 9; i++) {
+            containersList[i].value = undefined;
+            containersList[i].style.backgroundColor = `var(--main-area-color)`
         }
-    } else if (
-        document.querySelector(`#container_1`).value + document.querySelector(`#container_2`).value + document.querySelector(`#container_3`).value == `bbb`
-        ||
-        document.querySelector(`#container_4`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_6`).value == `bbb`
-        ||
-        document.querySelector(`#container_7`).value + document.querySelector(`#container_8`).value + document.querySelector(`#container_9`).value == `bbb`
-        ||
-        document.querySelector(`#container_1`).value + document.querySelector(`#container_4`).value + document.querySelector(`#container_7`).value == `bbb`
-        ||
-        document.querySelector(`#container_2`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_8`).value == `bbb`
-        ||
-        document.querySelector(`#container_3`).value + document.querySelector(`#container_6`).value + document.querySelector(`#container_9`).value == `bbb`
-        ||
-        document.querySelector(`#container_1`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_9`).value == `bbb`
-        ||
-        document.querySelector(`#container_3`).value + document.querySelector(`#container_5`).value + document.querySelector(`#container_7`).value == `bbb`
-    ) {
-        document.querySelector(`.result`).innerHTML = `ПОБЕДИЛИ НУЛИ`
-        for (let i = 0; i <= 9; i++) {
-            document.querySelector(`#container_${i+1}`).value = ``
-            document.querySelector(`#container_${i+1}`).innerHTML = ``
-        }
+        queue = 0
     }
-})
+ })
