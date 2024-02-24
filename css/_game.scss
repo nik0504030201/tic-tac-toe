@@ -1,8 +1,26 @@
+.game {
+  display: flex;
+  margin: 0;
+  &__results {
+    width: 25%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__queue {
+    width: 25%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .container {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
-  width: 40vw;
+  width: 35%;
   height: auto;
   gap: 20px;
   &__area {
@@ -17,4 +35,8 @@
     padding-top: 100%;
     display: block;
   }
+}
+.container__svg {
+  width: 100%;
+  height: 100%;
 }
