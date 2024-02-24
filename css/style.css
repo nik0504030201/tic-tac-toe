@@ -137,6 +137,13 @@ h1, .h1 {
   display: flex;
   margin: 0;
 }
+@media (max-width: 767px) {
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .game__results {
   width: 25%;
   font-size: 50px;
@@ -144,12 +151,24 @@ h1, .h1 {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .game__results {
+    width: 100%;
+  }
+}
 .game__queue {
   width: 25%;
   font-size: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .game__queue {
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+  }
 }
 
 .container {
@@ -160,12 +179,27 @@ h1, .h1 {
   height: auto;
   gap: 20px;
 }
+@media (max-width: 767px) {
+  .container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    justify-items: center;
+  }
+}
 .container__area {
   background-color: var(--main-area-color);
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .container__area {
+    width: 100%;
+  }
 }
 .container__area:after {
   content: "";
