@@ -209,7 +209,7 @@ containerNode.addEventListener("click", function (evt){
         }
         queue = 0
         tiesNode++
-        document.querySelector(`#ties`).innerHTML = `Ничьи: <br>${tiesNode}`
+        document.querySelector(`#ties`).innerHTML = `Ничьи: ${tiesNode}`
     }
     queueShow(queue)
  })
