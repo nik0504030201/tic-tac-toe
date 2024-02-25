@@ -137,7 +137,7 @@ h1, .h1 {
   display: flex;
   margin: 0;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1280px) {
   .game {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -165,7 +165,7 @@ h1, .h1 {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1280px) {
   .game__results {
     order: 3;
     text-align: center;
@@ -190,7 +190,7 @@ h1, .h1 {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1280px) {
   .game__queue {
     order: 2;
     text-align: center;
@@ -232,7 +232,7 @@ h1, .h1 {
   height: auto;
   gap: 20px;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1280px) {
   .container {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -273,7 +273,7 @@ h1, .h1 {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1280px) {
   .container__area {
     width: 100%;
   }
